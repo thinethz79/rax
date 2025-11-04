@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rax | Artisan T-Shirt Collection</title>
+    
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind for Inter font and Monochromatic color scheme --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Monochromatic Color Palette for RAX
+                        'kimbula-dark': '#000000', // Pure Black (Background)
+                        'kimbula-green': '#FFFFFF', // White (Primary Highlight/CTA)
+                        'kimbula-accent': '#9CA3AF', // Light Gray (Secondary Accent)
+                        'kimbula-text': '#F8FAFC', // Near White (Main Text)
+                        'kimbula-card': '#1a1a1a', // Slightly Lighter Black (Card Background)
+                        'kimbula-border': '#333333', // Darker gray for subtle borders
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        /* Base styles */
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-kimbula-dark text-kimbula-text font-sans min-h-screen flex flex-col">
+
+    <!-- Header / Navigation --><header class="bg-kimbula-dark border-b border-kimbula-border sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Home Link --><div class="text-3xl font-extrabold tracking-widest text-kimbula-green">
+                RAX
+            </div>
+            <!-- Simple Desktop Navigation --><nav class="flex space-x-6 text-kimbula-accent">
+                <a href="kimbula_brand.html" class="hover:text-kimbula-green transition">Back to Main</a>
+                <a href="#" class="hover:text-kimbula-green transition">All Apparel</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area --><main class="flex-grow">
+        
+        <!-- Collection Hero Banner --><section class="py-16 md:py-24 bg-kimbula-card border-b border-kimbula-border">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-kimbula-green mb-4">
+                    The Rax T-shirts
+                </h1>
+                <p class="text-xl text-kimbula-accent">
+                    Minimalist design meets premium comfort. Our core collection, crafted for daily expression and enduring quality.
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Grid --><section class="py-16 md:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Grid Container (Responsive 2 to 3 columns) --><div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    
+                    <!-- Product Card 1: Signature Rax Tee --><div class="bg-kimbula-card rounded-xl overflow-hidden shadow-2xl group hover:shadow-kimbula-accent/50 transition duration-300">
+                        <!-- Image: Signature Rax Tee --><div class="relative overflow-hidden">
+                            <img src="zombi t shit.png" alt="Black T-Shirt with RAX signature logo" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 sm:p-6 text-center">
+                            <h3 class="text-xl font-semibold text-kimbula-text">Whare is my candy </h3>
+                            <p class="text-kimbula-accent mt-1 mb-3">Core Collection</p>
+                            <p class="text-lg font-bold text-kimbula-green mb-4">LKR 2,000/=</p>
+                            <a href="#" class="block w-full py-2 bg-kimbula-green text-kimbula-dark font-medium rounded-lg hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-200 shadow-md">
+                                More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2: Geometric Motif Tee --><div class="bg-kimbula-card rounded-xl overflow-hidden shadow-2xl group hover:shadow-kimbula-accent/50 transition duration-300">
+                        <!-- Image: Geometric Motif Tee --><div class="relative overflow-hidden">
+                            <img src="rock band.png" alt="White T-Shirt with black geometric print" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 sm:p-6 text-center">
+                            <h3 class="text-xl font-semibold text-kimbula-text">ROCK BAND</h3>
+                            <p class="text-kimbula-accent mt-1 mb-3">BIG STOCK</p>
+                            <p class="text-lg font-bold text-kimbula-green mb-4">LKR 2,000/=</p>
+                            <a href="#" class="block w-full py-2 bg-kimbula-green text-kimbula-dark font-medium rounded-lg hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-200 shadow-md">
+                                More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3: Expression Line Tee --><div class="bg-kimbula-card rounded-xl overflow-hidden shadow-2xl group hover:shadow-kimbula-accent/50 transition duration-300">
+                        <!-- Image: Expression Line Tee --><div class="relative overflow-hidden">
+                            <img src="dragon.png" alt="Black T-Shirt with abstract line art" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 sm:p-6 text-center">
+                            <h3 class="text-xl font-semibold text-kimbula-text">DRAGON</h3>
+                            <p class="text-kimbula-accent mt-1 mb-3">New Arrival</p>
+                            <p class="text-lg font-bold text-kimbula-green mb-4">LKR 2,000/=</p>
+                            <a href="#" class="block w-full py-2 bg-kimbula-green text-kimbula-dark font-medium rounded-lg hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-200 shadow-md">
+                                More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4: Core Black Tee (Out of Stock) --><div class="bg-kimbula-card rounded-xl overflow-hidden shadow-2xl group hover:shadow-kimbula-accent/50 transition duration-300">
+                        <!-- Image: Core Black Tee --><div class="relative overflow-hidden">
+                            <img src="NO FILTER.png" alt="Solid black T-shirt" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 opacity-50">
+                        </div>
+                        <div class="p-4 sm:p-6 text-center">
+                            <h3 class="text-xl font-semibold text-kimbula-text">NO FILTER</h3>
+                            <p class="text-kimbula-accent mt-1 mb-3">Essential Wear</p>
+                            <p class="text-lg font-bold text-kimbula-green mb-4">LKR 1,600/=</p>
+                            <button disabled class="w-full py-2 bg-kimbula-border text-kimbula-accent font-medium rounded-lg cursor-not-allowed shadow-inner">
+                                Out of Stock
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5: Minimalist Logo Tee --><div class="bg-kimbula-card rounded-xl overflow-hidden shadow-2xl group hover:shadow-kimbula-accent/50 transition duration-300">
+                        <!-- Image: Minimalist Logo Tee --><div class="relative overflow-hidden">
+                            <img src="rasthiyadu.png" alt="Dark gray T-shirt with small minimalist logo" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 sm:p-6 text-center">
+                            <h3 class="text-xl font-semibold text-kimbula-text">rasthiyadu Padanama</h3>
+                            <p class="text-kimbula-accent mt-1 mb-3">limited-edition</p>
+                            <p class="text-lg font-bold text-kimbula-green mb-4">LKR 2,300/=</p>
+                            <a href="#" class="block w-full py-2 bg-kimbula-green text-kimbula-dark font-medium rounded-lg hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-200 shadow-md">
+                                More
+                            </a>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="bg-kimbula-dark border-t border-kimbula-border py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-kimbula-accent">
+            <p>&copy; 2025 Rax Lifestyle. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase JavaScript Setup (Minimal) --><script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        // --- Firebase Initialization (Required for the environment) ---
+        if (firebaseConfig) {
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            getFirestore(app); // Initialize firestore even if not used, for environment stability
+        
+            async function authenticate() {
+                try {
+                    if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch (error) {
+                    console.error("Firebase Auth Error:", error);
+                }
+            }
+            authenticate();
+        }
+    </script>
+</body>
+</html>

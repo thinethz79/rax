@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rax | Artisan Lifestyle & Expression</title>
+    
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind for Inter font and new Monochromatic color scheme --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // NEW MONOCHROMATIC COLOR PALETTE for RAX
+                        'kimbula-dark': '#000000', // Pure Black (Background)
+                        'kimbula-green': '#FFFFFF', // Replaced Green with White for Primary Highlight/CTA
+                        'kimbula-accent': '#9CA3AF', // Replaced Orange with Gray for Subtlety/Secondary Accent
+                        'kimbula-text': '#F8FAFC', // Near White for readability
+                        'kimbula-light-gray': '#9CA3AF', // Lighter gray for secondary text
+                        'kimbula-card': '#1a1a1a', // Slightly lighter black for cards
+                        'kimbula-border': '#333333', // Darker gray for subtle borders
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        /* Ensuring smooth scrolling and a subtle texture */
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Pure black background */
+        }
+    </style>
+</head>
+<body class="bg-kimbula-dark text-kimbula-text font-sans">
+
+    <!-- Header & Navigation --><!-- NOTE: Initial header is transparent (bg-kimbula-dark/0, backdrop-blur-0, shadow-none) for the "invisible" effect until scrolling. --><header id="main-header" class="sticky top-0 z-50 bg-kimbula-dark/0 backdrop-blur-0 shadow-none transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Space --><div class="flex items-center">
+                <!-- LOGO SIZE INCREASED (h-12 md:h-20) --><img 
+                    src="rax.png" 
+                    alt="Rax Brand Logo" 
+                    class="h-12 md:h-20"
+                    onerror="this.src='https://placehold.co/120x40/000000/FFFFFF?text=Rax+LOGO'"
+                >
+            </div>
+            <!-- Desktop Navigation --><nav class="hidden md:flex space-x-8">
+                <a href="#collection" class="text-lg font-medium text-kimbula-text hover:text-kimbula-accent transition duration-200">Shop</a>
+                <a href="#features" class="text-lg font-medium text-kimbula-text hover:text-kimbula-accent transition duration-200">Craftsmanship</a>
+                <a href="#about" class="text-lg font-medium text-kimbula-text hover:text-kimbula-accent transition duration-200">The Vision</a>
+                <a href="#contact" class="text-lg font-medium text-kimbula-green hover:text-kimbula-accent transition duration-200 border-2 border-kimbula-green px-4 py-1 rounded-full">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) --><button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-kimbula-green hover:bg-kimbula-card transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) --><nav id="mobile-menu" class="hidden md:hidden bg-kimbula-dark/90 px-4 pb-4">
+            <a href="#collection" class="block py-2 text-base font-medium text-kimbula-text hover:text-kimbula-accent transition">Shop</a>
+            <a href="#features" class="block py-2 text-base font-medium text-kimbula-text hover:text-kimbula-accent transition">Craftsmanship</a>
+            <a href="#about" class="block py-2 text-base font-medium text-kimbula-text hover:text-kimbula-accent transition">The Vision</a>
+            <a href="#contact" class="block py-2 text-base font-medium text-kimbula-green hover:text-kimbula-accent transition">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section --><section id="hero" class="relative overflow-hidden pt-24 pb-32 md:pt-40 md:pb-52">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Headline --><h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 leading-tight">
+                <span class="block text-kimbula-green drop-shadow-lg">Rax</span>
+                <span class="block text-kimbula-text mt-2">The Art of Expression.</span>
+            </h1>
+
+            <!-- Subheadline --><p class="mt-6 text-xl sm:text-2xl text-kimbula-light-gray max-w-4xl mx-auto">
+                Where fashion meets fragrance, and fleeting moments are framed in floral elegance. Discover a lifestyle curated with resilience and timeless style.
+            </p>
+
+            <!-- Main CTA Button --><div class="mt-12">
+                <!-- CTA: White background, Black text, Gray hover --><a href="#collection" class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-xl font-bold rounded-full shadow-2xl text-kimbula-dark bg-kimbula-green hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-kimbula-green/50">
+                    Explore Our Curations
+                </a>
+            </div>
+        </div>
+
+        <!-- Background Visual - Subtle Pattern --><div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Subtle pattern now uses a light gray fill --><path d="M50 0L65 35L100 50L65 65L50 100L35 65L0 50L35 35L50 0Z" fill="#9CA3AF" opacity="0.1"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Separator --><hr class="border-t-2 border-kimbula-accent max-w-4xl mx-auto opacity-50 my-16">
+
+    <!-- Feature Highlights Section: Craftsmanship --><section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading is now White --><h2 class="text-4xl font-bold text-center text-kimbula-green mb-16">The Rax Craftsmanship</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                
+                <!-- Feature 1: Artisan Apparel (T-shirts) --><div class="bg-kimbula-card p-6 sm:p-8 rounded-xl shadow-2xl text-center transform hover:scale-[1.03] transition duration-300">
+                    <!-- Icon is now light gray --><div class="text-4xl text-kimbula-accent mb-4 mx-auto">
+                        <!-- Icon: T-Shirt --><svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5l6 3.5V18l-6 3.5-6-3.5V8L12 4.5zM12 4.5L6 8M18 8l-6-3.5"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18h4M6 14h12"/></svg>
+                    </div>
+                    <!-- Subheading is now White --><h3 class="text-xl font-semibold mb-2 text-kimbula-green">Finest Fabric</h3>
+                    <p class="text-kimbula-light-gray text-sm">
+                        Curated apparel with superior comfort and timeless, hand-drawn designs.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Signature Fragrance (Perfume) --><div class="bg-kimbula-card p-6 sm:p-8 rounded-xl shadow-2xl text-center transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-kimbula-accent mb-4 mx-auto">
+                        <!-- Icon: Perfume Bottle / Droplet --><svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10.5V8.25a2 2 0 00-2-2v0a2 2 0 00-2 2V10.5M16 12H8m4 4v-4m-6 4h12a2 2 0 002-2v-3a2 2 0 00-2-2H6a2 2 0 00-2 2v3a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-kimbula-green">Unique Scents</h3>
+                    <p class="text-kimbula-light-gray text-sm">
+                        Complex, long-lasting perfumes using natural essences and rare botanicals.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Gifting Nature (Bouquets) --><div class="bg-kimbula-card p-6 sm:p-8 rounded-xl shadow-2xl text-center transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-kimbula-accent mb-4 mx-auto">
+                        <!-- Icon: Flower / Bouquet --><svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v-2a2 2 0 012-2h4a2 2 0 012 2v2m-6-4l3 3m3-3l-3 3M15 8V4m0 0H9m6 0h4m-4 10a4 4 0 11-8 0h8z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-kimbula-green">Fresh Florals</h3>
+                    <p class="text-kimbula-light-gray text-sm">
+                        Expertly arranged, hand-tied flower bouquets for every significant occasion.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Memory Preservation (Frames) --><div class="bg-kimbula-card p-6 sm:p-8 rounded-xl shadow-2xl text-center transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-kimbula-accent mb-4 mx-auto">
+                        <!-- Icon: Frame / Picture --><svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-12 5h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-kimbula-green">Framed Artistry</h3>
+                    <p class="text-kimbula-light-gray text-sm">
+                        Handcrafted frames designed to elevate your cherished photos and artwork.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase (Collection) - Now 4 Categories --><section id="collection" class="py-20 bg-kimbula-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-kimbula-text mb-16">Curated Categories</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Category Card 1: Apparel (T-Shirts) --><div class="bg-kimbula-dark rounded-xl shadow-xl overflow-hidden group">
+                    <!-- Placeholder image updated to reflect B&W/Gray theme --><img src="https://placehold.co/400x400/1a1a1a/FFFFFF?text=T-SHIRTS" alt="Rax Apparel Collection" onerror="this.src='https://placehold.co/400x400/1a1a1a/FFFFFF?text=T-SHIRTS'" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                    <!-- Title is now White --><div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-kimbula-green mb-2">Artisan Apparel</h3>
+                        <p class="text-kimbula-light-gray mb-4 text-sm">Signature tees and limited-edition graphic prints.</p>
+                        <!-- Button: White border, White text, Gray hover --><a href="index tshirts.html" class="inline-flex items-center justify-center w-full px-4 py-2 border border-kimbula-accent text-sm font-semibold rounded-lg text-kimbula-green hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-300">
+                            Shop T-Shirts
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 2: Perfume --><div class="bg-kimbula-dark rounded-xl shadow-xl overflow-hidden group">
+                    <!-- Placeholder image updated to reflect B&W/Gray theme --><img src="https://placehold.co/400x400/000000/9CA3AF?text=PERFUMES" alt="Rax Fragrance Collection" onerror="this.src='https://placehold.co/400x400/000000/9CA3AF?text=PERFUMES'" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-kimbula-green mb-2">Exclusive Scents</h3>
+                        <p class="text-kimbula-light-gray mb-4 text-sm">Eau de Parfum and oil blends, inspired by nature.</p>
+                        <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 border border-kimbula-accent text-sm font-semibold rounded-lg text-kimbula-green hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-300">
+                            Not available
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 3: Flower Bouquets --><div class="bg-kimbula-dark rounded-xl shadow-xl overflow-hidden group">
+                    <!-- Placeholder image updated to reflect B&W/Gray theme --><img src="https://placehold.co/400x400/9CA3AF/000000?text=FLOWERS" alt="Rax Floral Arrangements" onerror="this.src='https://placehold.co/400x400/9CA3AF/000000?text=FLOWERS'" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-kimbula-green mb-2">Bouquet Curation</h3>
+                        <p class="text-kimbula-light-gray mb-4 text-sm">Hand-tied fresh flowers for gifting and special events.</p>
+                        <a href="index flowers.html" class="inline-flex items-center justify-center w-full px-4 py-2 border border-kimbula-accent text-sm font-semibold rounded-lg text-kimbula-green hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-300">
+                            Order Bouquets
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 4: Photo Framing --><div class="bg-kimbula-dark rounded-xl shadow-xl overflow-hidden group">
+                    <!-- Placeholder image updated to reflect B&W/Gray theme --><img src="https://placehold.co/400x400/1a1a1a/FFFFFF?text=FRAMES" alt="Rax Photo Frames" onerror="this.src='https://placehold.co/400x400/1a1a1a/FFFFFF?text=FRAMES'" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-kimbula-green mb-2">Memory Framing</h3>
+                        <p class="text-kimbula-light-gray mb-4 text-sm">Bespoke and ready-made frames for cherished photographs.</p>
+                        <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 border border-kimbula-accent text-sm font-semibold rounded-lg text-kimbula-green hover:bg-kimbula-accent hover:text-kimbula-dark transition duration-300">
+                            Not available
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section --><section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mt-10 md:mt-0 order-2">
+                    <!-- Placeholder image updated to reflect B&W/Gray theme --><img src="rax.png" alt="Rax Artisan products display" onerror="this.src='https://placehold.co/600x400/000000/9CA3AF?text=Rax+Lifestyle'" class="w-2/3 mx-auto md:w-full rounded-2xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2 order-1">
+                    <!-- Heading is now White --><h2 class="text-4xl font-bold text-kimbula-green mb-6">Our Vision: The Rax Experience</h2>
+                    <p class="text-kimbula-light-gray text-lg mb-4">
+                        The **Rax** brand is built on the philosophy that true luxury lies in **intentional living**. We meticulously select or create products that enhance your daily life and celebrate significant moments—from the fabric you wear to the scent that defines your space.
+                    </p>
+                    <p class="text-kimbula-light-gray">
+                        Our collections—Apparel, Fragrance, Florals, and Framing—are unified by a commitment to **natural quality**, artisan precision, and a distinctive aesthetic that is both bold and enduring, mirroring the strength and grace of our namesake.
+                    </p>
+                    <div class="mt-8">
+                        <!-- Link is now White with a light gray hover and border --><a href="#contact" class="inline-flex items-center text-lg font-semibold text-kimbula-green hover:text-kimbula-accent transition duration-300 border-b-2 border-kimbula-accent">
+                            Meet Our Artisans &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section --><footer id="contact" class="bg-kimbula-card py-12 border-t border-kimbula-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Footer Logo Space --><div class="flex justify-center mb-6">
+                <!-- LOGO SIZE INCREASED (h-16) --><img 
+                    src="rax.png" 
+                    alt="Rax Brand Logo" 
+                    class="h-16"
+                    onerror="this.src='https://placehold.co/150x60/000000/FFFFFF?text=Rax+LOGO'"
+                >
+            </div>
+
+            <!-- Links --><div class="flex justify-center space-x-6 mb-8 text-kimbula-light-gray">
+                <a href="#" class="hover:text-kimbula-green transition">Shipping & Delivery</a>
+                <a href="#" class="hover:text-kimbula-green transition">Wholesale Inquiries</a>
+                <a href="#" class="hover:text-kimbula-green transition">Press</a>
+                <a href="#" class="hover:text-kimbula-green transition">Service & Support</a>
+            </div>
+
+            <!-- Contact/Email Signup Placeholder --><div class="mt-8 text-kimbula-light-gray">
+                <p class="mb-3">Stay Connected & Discover New Curations</p>
+                <input type="email" placeholder="Enter your email address" class="w-full max-w-sm p-3 rounded-lg bg-kimbula-dark border border-kimbula-border text-kimbula-text focus:outline-none focus:ring-2 focus:ring-kimbula-green">
+                <!-- Subscribe button: White background, Black text, Gray hover --><button class="ml-2 px-6 py-3 bg-kimbula-green text-kimbula-dark font-bold rounded-lg hover:bg-kimbula-accent transition duration-200 mt-4 sm:mt-0">
+                    Subscribe
+                </button>
+            </div>
+
+            <!-- Copyright --><p class="mt-12 text-sm text-kimbula-light-gray">
+                &copy; 2025 Rax Lifestyle. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Dynamic Header --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const header = document.getElementById('main-header');
+            
+            // Classes for the header when SCROLLED
+            const scrolledClasses = ['bg-kimbula-dark/95', 'backdrop-blur-sm', 'shadow-xl'];
+            // Classes for the header when at the TOP
+            const topClasses = ['bg-kimbula-dark/0', 'backdrop-blur-0', 'shadow-none'];
+
+            // Function to toggle menu visibility
+            const toggleMenu = () => {
+                menu.classList.toggle('hidden');
+            };
+
+            // Event listener for the hamburger button
+            button.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked (for better UX on mobile)
+            const menuLinks = menu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the menu is visible before hiding
+                    if (!menu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Dynamic Header Scroll Logic
+            const handleScroll = () => {
+                // Check if scroll position is beyond a small threshold (e.g., 20px)
+                if (window.scrollY > 20) {
+                    // Apply scrolled classes (make it visible/opaque)
+                    header.classList.remove(...topClasses);
+                    header.classList.add(...scrolledClasses);
+                } else {
+                    // Apply top classes (make it transparent/invisible)
+                    header.classList.remove(...scrolledClasses);
+                    header.classList.add(...topClasses);
+                }
+            };
+
+            // Initial check and subsequent scroll listener
+            handleScroll();
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
+</html>
